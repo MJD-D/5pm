@@ -1,7 +1,14 @@
+'use client'
+
 import Image from 'next/image'
+import {useState} from 'react';
 
 export default function GoogleBooking() {
   //TODO add sidebar and topnav
+
+  const [checked,setChecked] = useState();
+
+
     return (
     <main className="flex-1">
 
@@ -25,14 +32,14 @@ export default function GoogleBooking() {
               <div class="form-container p-4 sm:px-6 py-4">
                 <div class="block">
                   <p class="mb-4">
-                    <input type='radio' name='rbGoogle' id='rbGoogleEnabled' class="form-radio h-5 w-5 text-green-600" value="true" />
+                    <input type='radio' name='rbGoogle' id='rbGoogleEnabled' class="form-radio h-5 w-5 text-green-600" value="true" onChange={(e)=> {setChecked(true)}}/>
                     <label for="rbGoogleEnabled" >&nbsp;Enable</label>
                     &nbsp;&nbsp;&nbsp;
-                    <input type='radio' name='rbGoogle' id='rbGoogleDisabled' class="form-radio h-5 w-5 text-red-600" value="false" defaultChecked/>
+                    <input type='radio' name='rbGoogle' id='rbGoogleDisabled' class="form-radio h-5 w-5 text-red-600" value="false" onChange={(e) => {setChecked(false)}} defaultChecked/>
                     <label for="rbGoogleDisabled" >&nbsp;Disable</label>
                     <br/>
                   </p>
-
+                  { checked &&
                   <div id="fieldSection">
                     <div class="form-row w-full max-w-md mb-6">
                       <div class="flex justify-between">
@@ -42,7 +49,7 @@ export default function GoogleBooking() {
                       <span class="text-sm leading-5 text-gray-500">Required</span>
                       </div>
                       <div class="mt-1 relative rounded-md shadow-sm">
-                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text" value="Pete test" />
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text" />
                       </div>
                     </div>
                     
@@ -54,7 +61,7 @@ export default function GoogleBooking() {
                       <span class="text-sm leading-5 text-gray-500">Required</span>
                       </div>
                       <div class="mt-1 relative rounded-md shadow-sm">
-                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text" value="Pete test" />
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="PublicURL" name="Public Url" type="text" />
                       </div>
                     </div>
 
@@ -78,7 +85,7 @@ export default function GoogleBooking() {
                       <span class="text-sm leading-5 text-gray-500">Required</span>
                       </div>
                       <div class="mt-1 relative rounded-md shadow-sm">
-                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text"  />
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Address" name="Address" type="text"  />
                       </div>
                     </div>
 
@@ -90,7 +97,7 @@ export default function GoogleBooking() {
                       <span class="text-sm leading-5 text-gray-500">Required</span>
                       </div>
                       <div class="mt-1 relative rounded-md shadow-sm">
-                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text"  />
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="PostCode" name="PostCode" type="text"  />
                       </div>
                     </div>
 
@@ -102,7 +109,7 @@ export default function GoogleBooking() {
                       <span class="text-sm leading-5 text-gray-500">Required</span>
                       </div>
                       <div class="mt-1 relative rounded-md shadow-sm">
-                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text" value="Pete test" />
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Locality" name="Locality" type="text"/>
                       </div>
                     </div>
                     
@@ -119,6 +126,11 @@ export default function GoogleBooking() {
                         </div>
                     </div>
                   </div>
+                  }
+
+                    <div class="form-row">
+                      <a class="submitbtn float-right inline-flex items-center px-4 py-2  border border-transparent bg-purple-600 shadow-sm text-base font-medium rounded-md   hover:bg-purple-700 active:bg-purple-600 active:text-white-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-150 ease-in-out text-white" href="#">Save Settings</a>
+                    </div>
                 </div>
               </div>
             </div>
