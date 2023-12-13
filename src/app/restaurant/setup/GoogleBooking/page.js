@@ -16,7 +16,112 @@ export default function GoogleBooking() {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="sm:flex flex-row items-top">
           <div class="sm:w-1/2 mt-8 mb-4 max-w-7xl">
+            <div class="bg-white rounded shadow overflow-hidden">
+              <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                  Enable or Disable Google Maps Booking
+                </h3>
+              </div>
+              <div class="form-container p-4 sm:px-6 py-4">
+                <div class="block">
+                  <p class="mb-4">
+                    <input type='radio' name='rbGoogle' id='rbGoogleEnabled' class="form-radio h-5 w-5 text-green-600" value="true" />
+                    <label for="rbGoogleEnabled" >&nbsp;Enable</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type='radio' name='rbGoogle' id='rbGoogleDisabled' class="form-radio h-5 w-5 text-red-600" value="false" defaultChecked/>
+                    <label for="rbGoogleDisabled" >&nbsp;Disable</label>
+                    <br/>
+                  </p>
 
+                  <div id="fieldSection">
+                    <div class="form-row w-full max-w-md mb-6">
+                      <div class="flex justify-between">
+                          <label for="Name" class="block text-sm font-medium leading-5 text-gray-700">
+                              Name - required
+                          </label>
+                      <span class="text-sm leading-5 text-gray-500">Required</span>
+                      </div>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text" value="Pete test" />
+                      </div>
+                    </div>
+                    
+                    <div class="form-row w-full max-w-md mb-6">
+                      <div class="flex justify-between">
+                          <label for="Name" class="block text-sm font-medium leading-5 text-gray-700">
+                            Public URL
+                          </label>
+                      <span class="text-sm leading-5 text-gray-500">Required</span>
+                      </div>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text" value="Pete test" />
+                      </div>
+                    </div>
+
+                    <div class="form-row w-full max-w-md mb-6">
+                      <div class="flex justify-between">
+                          <label for="Name" class="block text-sm font-medium leading-5 text-gray-700">
+                              Phone
+                          </label>
+                      <span class="text-sm leading-5 text-gray-500">Required</span>
+                      </div>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Phone" name="Phone" type="text"  />
+                      </div>
+                    </div>
+
+                    <div class="form-row w-full max-w-md mb-6">
+                      <div class="flex justify-between">
+                          <label for="Name" class="block text-sm font-medium leading-5 text-gray-700">
+                              Address
+                          </label>
+                      <span class="text-sm leading-5 text-gray-500">Required</span>
+                      </div>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text"  />
+                      </div>
+                    </div>
+
+                    <div class="form-row w-full max-w-md mb-6">
+                      <div class="flex justify-between">
+                          <label for="Name" class="block text-sm font-medium leading-5 text-gray-700">
+                              Postal Code
+                          </label>
+                      <span class="text-sm leading-5 text-gray-500">Required</span>
+                      </div>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text"  />
+                      </div>
+                    </div>
+
+                    <div class="form-row w-full max-w-md mb-6">
+                      <div class="flex justify-between">
+                          <label for="Locality" class="block text-sm font-medium leading-5 text-gray-700">
+                              Locality
+                          </label>
+                      <span class="text-sm leading-5 text-gray-500">Required</span>
+                      </div>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                          <input  class="block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300 rounded-md text-box single-line" id="Name" name="Name" type="text" value="Pete test" />
+                      </div>
+                    </div>
+                    
+
+                    <div class="form-row w-full max-w-md mb-6">
+                      <div class="flex justify-between">
+                        <label for="RWGMessage" class="block text-sm font-medium leading-5 text-gray-700">
+                        Google Booking message
+                        </label>
+                        <span class="text-sm leading-5 text-gray-500"></span>
+                      </div>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                          
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="sm:w-1/2 sm:ml-8 mt-8">
           <div class="alert bg-white border-purple-500 border-t-4 rounded p-4 max-w-7xl mx-auto shadow sm:px-6 ">
